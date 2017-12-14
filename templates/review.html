@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="{{ url_for('static', filename='review.css')}}">
+</head>
+    
+<body>
+
+<div class="image">
+<img src="{{ url_for('static', filename='review_room.jpg')}}" alt="Bali" style="width:480px;height:320px">
+&nbsp
+</div>
+<div class="image-2">
+<img src="{{ url_for('static', filename='review_breakfast.jpg')}}" alt="Bali" style="width:480px;height:320px">
+&nbsp
+</div>
+
+    <!-- Breakfast -->
+    <div class="first">
+        <b>Write a breakfast review!</b>
+        <form id="form1" name="form1" method="post" action="">
+        <textarea name="breakfasttext" id="textarea" cols="45" rows="5"></textarea>
+<!--        <input type="submit" name="breakfastbutton" id="button" value="Submit"/> -->
+<!--        </form>    -->
+    </div>
+    
+    <!-- Room -->
+    <div class="second">
+        <b>Write a room review!</b>
+<!--        <form id="form1" name="form1" method="post" action=""> -->
+        <textarea name="roomtext" id="textarea" cols="45" rows="5"></textarea>
+<!--        <input type="submit" name="roombutton" id="button" value="Submit"/> -->
+<!--        </form>    -->
+    </div>
+    
+    <!-- Service -->
+    <div class="third">      
+        <b>Write a service review!</b>
+<!--        <form id="form1" name="form1" method="post" action=""> -->
+        <textarea name="servicetext" id="textarea" cols="45" rows="5"></textarea>
+<!--        <input type="submit" name="servicebutton" id="button" value="Submit"/> -->
+<!--        </form>    -->
+    </div>
+    &nbsp
+    <div class="fourth"> 
+<!--	<form id="form1" method="post" action="">     -->
+        <input type="submit" name="returnbutton" id="button" value="Submit"/>
+        </form>    
+    </div>
+
+    
+</body>
+</html>

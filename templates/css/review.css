@@ -1,0 +1,43 @@
+/* Breakfast Review */
+.first{
+     width:70%;
+     height:300px;
+     position:relative;
+     top:100px;
+ }
+
+/* Room Review */ 
+.second{
+    width:40%;
+    height:200px;
+	position: relative;
+	top:50px;
+}
+
+/* Service Review */
+.third{
+    width:40%;
+    height:200px;
+	position: relative;
+	top: 100px;
+}
+
+.image {
+    position: absolute;
+    right: 500px;
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 50px;
+    display: block;
+}
+
+.image-2 {
+    position: absolute;
+    right: 300px;
+    top: 350px;
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 50px;
+    display: block;
+}
+

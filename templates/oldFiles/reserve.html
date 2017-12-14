@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Make reservation!</title>
+<div class="title-content">
+  <h1>Reserve a hotel!</h1>
+  <p>Reserve a world-class hotel in one of our many locations!</p> 
+</div>
+
+<style>
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.text-content {
+    position: fixed;
+    top: 30%;
+    left: 46%;
+}
+
+.title-content{
+    position: fixed;
+    top: 10%;
+    left: 38%;
+    font-size: 32px;
+}
+
+h1 {
+    text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<div class="text-content">
+<h2>Select which hotel to reserve:</h2>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">New York City</a>
+    <a href="#">Chicago</a>
+    <a href="#">Los Angeles</a>
+    <a href="#">Seattle</a>
+    <a href="#">Atlanta</a>
+  </div>
+</div>
+
+<select>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="opel">Opel</option>
+  <option value="audi">Audi</option>
+</select>
+
+</body>
+</html>
+

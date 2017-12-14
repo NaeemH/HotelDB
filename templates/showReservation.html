@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<link rel="stylesheet" href="css/showReservation.css">
+</head>
+<body>
+{% for reservation in showReservations %} 
+<!--<textarea rows="1" cols="30"> </textarea> City
+&nbsp
+<textarea rows="1" cols="30"> </textarea> Name
+&nbsp
+<textarea rows="1" cols="30"> </textarea> Email
+&nbsp
+<textarea rows="1" cols="30"> </textarea> Phone
+&nbsp
+<textarea rows="1" cols="30"> </textarea> Street
+&nbsp
+<textarea rows="1" cols="30"> </textarea> State
+&nbsp
+<textarea rows="1" cols="30"> </textarea> ZIP Code
+&nbsp
+<textarea rows="1" cols="30"> </textarea> Country
+&nbsp -->
+
+<!--
+<textarea rows="1" cols="30"> </textarea> Check-In Date
+&nbsp
+<textarea rows="1" cols="30"> </textarea> Check-Out Date
+&nbsp
+<textarea rows="1" cols="30"> </textarea> Number of people
+&nbsp
+<textarea rows="1" cols="30"> </textarea> Bed Type
+&nbsp
+<textarea rows="1" cols="30"> </textarea> Number of beds
+&nbsp
+<textarea rows="4" cols="50"> </textarea> Extra needs
+&nbsp
+<br><br><br>
+-->
+{{reservation.startDate}}
+{{reservation.endDate}}
+{{reservation.party}}
+{{reservation.bedType}}
+{{reservation.room}}
+{{reservation.special}}
+<br><br><br>
+{% endfor %}
+</body>
+</html>

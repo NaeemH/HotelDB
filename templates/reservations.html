@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+ <link rel="stylesheet" href="{{ url_for('static', filename='reservations.css')}}">
+</head>
+<body>
+
+<form action="" method="post">
+
+<div class="image">
+<img src="{{ url_for('static', filename='hotel_suite.jpg')}}" alt="Bali" style="width:480px;height:320px">
+&nbsp
+<img src="{{ url_for('static', filename='hotel_view.jpg')}}" alt="Bali" style="width:480px;height:320px">
+</div>
+
+<div class="image-2">
+<img src="{{ url_for('static', filename='hotel_beach.jpg')}}" alt="Bali" style="width:480px;height:320px">
+&nbsp
+<img src="{{ url_for('static', filename='hotel_dinner.jpg')}}" alt="Bali" style="width:480px;height:320px">
+</div>
+
+    <!-- Location -->
+    <input type="radio" name="location" value="New York">New York<br>
+    <input type="radio" name="location" value="Chicago">Chicago<br>
+    <input type="radio" name="location" value="Los Angeles">Los Angeles<br>
+    <input type="radio" name="location" value="Seattle">Seattle<br>
+    <input type="radio" name="location" value="New Orleans">New Orleans<br>    
+
+    <!--  Booking & Contact -->
+    <div class="form-group">
+        <h2 class="heading">Booking & Contact Info</h2>
+            <div class="controls">
+                <input type="text" id="name" class="floatLabel" name="name">
+                <label for="name">Name</label>
+            </div>
+            <div class="controls">
+                <input type="email" id="email" class="floatLabel" name="email">
+                <label for="email">Email</label>
+            </div>       
+            <div class="controls">
+                <input type="tel" id="tel" class="floatLabel" name="phone">
+                <label for="phone">Phone</label>
+            </div>
+            <div class="controls">
+                <input type="text" id="street" class="floatLabel" name="street">
+                <label for="street">Street</label>
+            </div>
+            <div class="controls">
+                <input type="text" id="state" class="floatLabel" name="state">
+                <label for="street">State</label>
+            </div>  
+            <div class="controls">
+                <input type="number" id="zip" class="floatLabel" name="zip">
+                <label for="zip">ZIP Code</label>
+            </div>   
+            <div class="controls">
+                <input type="text" id="country" class="floatLabel" name="country">
+                <label for="country">Country</label>
+            </div>
+    </div>
+    
+    <!--  Details -->
+    <div class="form-group">
+        <h2 class="heading">Details</h2>
+        
+        <div class="grid">
+            <div class="col-1-4 col-1-4-sm">
+                <div class="controls">
+                    <input type="date" id="arrive" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
+                    <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Check-In</label>
+                </div>      
+            </div>
+            <div class="col-1-4 col-1-4-sm">
+                <div class="controls">
+                    <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
+                    <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Check-out</label>
+                </div>      
+            </div>
+        </div>
+        
+        <br>
+        <!-- # People per room -->
+        <div class="grid">
+            <div class="col-1-3 col-1-3-sm">
+                <div class="controls">
+                    <i class="fa fa-sort"></i>
+                        <select class="floatLabel" name = "numPersons">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                    <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;People</label>
+                </div>      
+            </div>
+        </div>
+        
+        <br>
+        <!-- Service Checklist -->  
+        <div class="controls">
+           <!-- <form action="" method="get"> -->
+                Desired Services <br>
+                <input type="checkbox" name="breakfastfeature" value="breakfast">Breakfast<br>
+                <input type="checkbox" name="roomfeature" value="roomService">Room Service<br>
+                <input type="checkbox" name="servicefeature" value="ppv">Pay-Per-View<br>
+                <!-- <input type="submit" value="Submit"> -->
+            <!-- </form> -->
+            <br>
+            <i class="fa fa-sort"></i>
+            <select class="floatLabel" name = "numBeds">
+                <option name=bed value="single" selected>Single Bed</option>
+                <option name=bed value="double">Double Bed</option>
+            </select>
+            <label for="fruit">Room</label>
+        </div>
+        
+        <br>
+        <!-- Comments textbox -->
+        <div class="grid">
+            <p class="info-text">Please describe your needs e.g. Extra beds, toiletries, etc.</p>
+            <br>
+            <div class="controls">
+                <textarea name="comments" class="floatLabel" id="comments"></textarea>
+                &nbsp
+                <label for="comments">Comments</label>
+            </div>
+            <br>
+            <!-- <button type="submit" value="Submit" class="col-1-4">Submit</button> -->
+        </div>  
+    </div>
+
+<input name=draft type="submit" value="Continue">
+
+</form>
+
+<!-- WARNING! THIS BUTTON BELOW DOES NOT SUBMIT FORM DATA - IT SIMPLY RELINKS TO ANOTHER PAGE -->
+
+
+<!--
+<script>
+(function($){
+	function floatLabel(inputType){
+		$(inputType).each(function(){
+			var $this = $(this);
+			// on focus add cladd active to label
+			$this.focus(function(){
+				$this.next().addClass("active");
+			});
+			//on blur check field and remove class if needed
+			$this.blur(function(){
+				if($this.val() === '' || $this.val() === 'blank'){
+					$this.next().removeClass();
+				}
+			});
+		});
+	}
+	// just add a class of "floatLabel to the input field!"
+	floatLabel(".floatLabel");
+})(jQuery);
+</script>
+-->
+</body>
+</html>

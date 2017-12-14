@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Miranda's Love Hotels!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="css/login.scss"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+		{%- for message in get_flashed_messages() %}
+			{{message}}
+		{%- endfor %}	
+
+<div class="jumbotron text-center">
+  <h1>Welcome to Miranda's Love Hotels!</h1>
+  <p>We accomodate private couples, and have a fine collection of sex dungeons, escorts, and high-society adult activities!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+  
+    <div class="col-sm-6">
+      <h3>Login</h3>
+      <p>Log-in to your user account to view, alter, or order reservations</p>
+      <form action=""method = "post">
+        Username:<br>
+        <input type="text" name="username" value="">
+        <br>
+        Password:<br>
+        <input type="text" name="password" value="">
+        <br><br>
+        <input name=draft type="submit" value="Login" text-align="center">
+	<input name=draft type="submit" value="Register" text-align="center">
+	<input name=draft type="submit" value="Stats for nerds" text-align="center">	
+        </form>
+        &nbsp
+
+        <!--
+        <form>
+            <input placeholder="Username" type="text" required="">
+            <input placeholder="Password" type="password" required="">
+            <button>Submit</button>
+        </form>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>       
+        -->        
+
+
+</body>
+</html>

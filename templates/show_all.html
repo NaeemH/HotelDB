@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head></head>
+	<body>
+	
+		<h3>
+			<a href = "{{url_for('login') }}">Back to Login/Registration Page</a>
+		</h3>
+
+		<hr/>
+	
+		<table>
+			<thead> <!-- UsersDB -->
+				<tr>
+					<th>Username</th>
+					<th>Password</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% for user in showUsers %}
+					<tr>
+						<td>{{user.username}}</td>
+						<td>{{user.password}}</td>
+
+					</tr>
+				{% endfor %}
+			</tbody>
+			<thead> <!-- homeAddressDB -->
+				<tr>
+					<th>id</th>
+					<th>Street</th>
+					<th>State</th>
+					<th>zipCode</th>
+					<th>Country</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% for user in showHomeAddresses %}
+					<tr>
+						<td>{{user.id}}</td>
+						<td>{{user.street}}</td>
+						<td>{{user.state}}</td>
+						<td>{{user.zipCode}}</td>
+						<td>{{user.country}}</td>
+
+					</tr>
+				{% endfor %}
+			</tbody>
+			<thead> <!-- billingAddressDB -->
+				<tr>
+					<th>id</th>
+					<th>Street</th>
+					<th>City</th>
+					<th>State</th>
+					<th>Zipcode</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% for user in showBillingAddresses %}
+					<tr>
+						<td>{{user.id}}</td>
+						<td>{{user.street}}</td>
+						<td>{{user.city}}</td>
+						<td>{{user.state}}</td>
+						<td>{{user.zipCode}}</td>
+
+					</tr>
+				{% endfor %}
+			</tbody>
+			<thead> <!-- expirationDateDB -->
+				<tr>
+					<th>id</th>
+					<th>Month</th>
+					<th>Year</th>
+		
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% for user in showExpirationDates %}
+					<tr>
+						<td>{{user.id}}</td>
+						<td>{{user.month}}</td>
+						<td>{{user.year}}</td>				
+
+				{% endfor %}
+			</tbody>
+			<thead> <!-- creditCardDB -->
+				<tr>
+					<th>Card Number</th>
+					<th>Name</th>
+					<th>Billing Address</th>
+					<th>Security Code</th>
+					<th>Card Type</th>
+					<th>Expiration Month</th>
+					<th>Expiration Year</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% for user in showCreditCards %}
+					<tr>
+						<td>{{user.cnumber}}</td>
+						<td>{{user.name}}</td>
+						<td>{{user.billingAddr}}</td>
+						<td>{{user.secCode}}</td>
+						<td>{{user.cardType}}</td>
+						<td>{{user.expirationMonth}}</td>
+						<td>{{user.expirationYear}}</td>
+
+					</tr>
+				{% endfor %}
+			</tbody>
+			<thead> <!-- reservationDB -->
+				<tr>
+					<th>Location</th>
+					<th>startDate</th>
+					<th>endDate</th>
+					<th>No. People</th>
+					<th>breakfast service?</th>
+					<th>room service?</th>
+					<th>pay per view?</th>
+					<th>bedType</th>
+					<th>special</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% for user in showReservations %}
+					<tr>
+						<td>{{user.location}}</td>
+						<td>{{user.startDate}}</td>
+						<td>{{user.endDate}}</td>
+						<td>{{user.party}}</td>
+						<td>{{user.breakfast}}</td>
+						<td>{{user.room}}</td>
+						<td>{{user.payperview}}</td>
+						<td>{{user.bedType}}</td>
+						<td>{{user.special}}</td>
+
+					</tr>
+				{% endfor %}
+			</tbody>
+			<thead> <!-- breakfastReviewDB -->
+				<tr>
+					<th>id</th>
+					<th>Breakfast Text</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% for user in showBreakfastReviews %}
+					<tr>
+						<td>{{user.id}}</td>
+						<td>{{user.textComment}}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+			<thead> <!-- roomReviewDB -->
+				<tr>
+					<th>id</th>
+					<th>Room Text</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% for user in showRoomReviews %}
+					<tr>
+						<td>{{user.id}}</td>
+						<td>{{user.textComment}}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+			<thead> <!-- serviceReviewDB -->
+				<tr>
+					<th>id</th>
+					<th>Service Text</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% for user in showServiceReviews %}
+					<tr>
+						<td>{{user.id}}</td>
+						<td>{{user.textComment}}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		
+		<div>
+     			<form action=""method = "post">
+				<input name=dbmanipulation type="submit" value="Purge DB" text-align="center">
+			</form>
+		</div>
+	</body>
+</html>

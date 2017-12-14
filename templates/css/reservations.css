@@ -1,0 +1,17 @@
+.image {
+    position: absolute;
+    right: 650px;
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 50px;
+    display: block;
+}
+
+.image-2 {
+    position: absolute;
+    right: 150px;
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 50px;
+    display: block;
+}
