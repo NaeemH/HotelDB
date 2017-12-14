@@ -1,4 +1,7 @@
 # hotel_db
+Naeem Hossain, Alex Jia, Hans Keistopholes
+December 13, 2017
+
 DB Project
 Requires venv, Python3, Flask, flask-MySQLAlchemy.
 
